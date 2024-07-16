@@ -1,44 +1,44 @@
 <?php
 require_once '../components/header.php';
-?>
-
-<?php
 require_once '../admin/components/navbar.php';
+require_once '../function/category_add.php';
+
+$database = new Connection();
+$list = new Category($database);
+$result = $list->getCategory();
+
 ?>
 <div class="container-fluid">
 
     <div class="d-flex align-items-end justify-content-end container my-3">
-        <a href="" class="btn btn-outline-primary">Add Category</a>
+        <a href="add-category" class="btn btn-outline-primary">Add Category</a>
     </div>
 
     <table class="table container table-bordered">
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Category Name</th>
+                <th scope="col">Action</th>
+
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry the Bird</td>
-                <td>Thornton</td>
-                <td>@twitter</td>
-            </tr>
+            <?php
+
+
+            while ($row = $result->fetch_assoc()) {
+            ?>
+
+                <tr>
+                    <th scope="row"><?php echo $row['id'] ?></th>
+                    <td><?php echo $row['category_name'] ?></td>
+                    <td>
+                        <a href="">edit</a>
+                        <a href="">delete</a>
+                    </td>
+                </tr>
+            <?php } ?>
         </tbody>
     </table>
 </div>

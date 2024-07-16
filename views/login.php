@@ -1,5 +1,5 @@
 <?php
-require_once "./components/header.php"
+require_once "../components/header.php"
 ?>
 
 <div class="container w-25 h-100 d-flex ">
@@ -91,5 +91,5 @@ require_once "./components/header.php"
     </main>
 </div>
 <?php
-require_once "./components/footer.php"
+require_once "../components/footer.php"
 ?>

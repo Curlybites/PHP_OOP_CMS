@@ -22,7 +22,7 @@
     <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
     <meta name="theme-color" content="#712cf9">
 
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="../styles/index.css">
 
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&amp;display=swap" rel="stylesheet">

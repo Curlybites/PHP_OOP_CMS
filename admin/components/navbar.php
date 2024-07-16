@@ -15,6 +15,12 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="category">Category</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="author">Author</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="user">User</a>
+                </li>
 
             </ul>
             <form class="navbar-nav" role="search">
